@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
-    "blurhash": "^1.1.5",
     "clsx": "^1.1.1",
     "framer-motion": "^6.2.9",
     "next": "^12.1.4",

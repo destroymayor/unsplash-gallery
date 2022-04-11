@@ -1,24 +1,18 @@
 import Image from 'next/image';
 
-import useBlurHash from '@/hooks/use-blurhash.hook';
-
 export default function Photo(props) {
   const { data } = props;
 
-  const { width, height, alt_description, urls, blur_hash, user } = data;
+  const { width, height, alt_description, urls, user } = data;
   const { name, profile_image, links } = user;
-
-  // const blurDataUrl = useBlurHash(blur_hash);
 
   return (
     <div className="group relative">
       <Image
         className="rounded-lg"
         unoptimized
-        src={urls.regular}
+        src={urls?.regular}
         alt={alt_description}
-        // placeholder="blur"
-        // blurDataURL={blurDataUrl}
         width={width}
         height={height}
       />
@@ -27,13 +21,13 @@ export default function Photo(props) {
         <Image
           className="rounded-full"
           unoptimized
-          src={profile_image.medium}
+          src={profile_image?.medium}
           width={32}
           height={32}
           alt={name}
         />
         <a
-          href={`${links.html}?utm_source=image-gallery&utm_medium=referral`}
+          href={`${links?.html}?utm_source=image-gallery&utm_medium=referral`}
           target="_blank"
           rel="noreferrer"
           className="text-zinc-50 hover:underline"
