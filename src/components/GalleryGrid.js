@@ -17,7 +17,7 @@ export default function GalleryGrid(props) {
     );
 
   return (
-    <div className="m-2 flex flex-row flex-wrap items-stretch justify-center gap-2 md:flex-nowrap">
+    <div className="mx-2 flex flex-row flex-wrap items-stretch justify-center gap-2 md:flex-nowrap">
       {data.map((grid, index) => (
         <div key={`gallery-${index}`} className="flex flex-col items-stretch justify-start">
           {grid?.map((item, itemIndex) => (
